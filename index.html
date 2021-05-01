@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .body, .html {
+            height: 100%;
+            display: grid;
+        }
+
+        .body {
+            overflow-y: hidden;
+        }
+
+        .slider {
+            margin: auto;
+            background-color: white;
+            width: 58.313rem;
+            height: 44.938rem;
+            border: 0.563rem solid #3e92cc;
+            border-radius: 0.5rem;
+            position: relative;
+        }
+
+        .btn {
+            width: 2rem;
+            height: 2.563rem;
+            border: 0.25rem solid #3e92cc;
+            border-radius: .25rem;
+            background-color: #3e92cc;
+            color: #f2fdff;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transition: background-color .2s ease-in-out, color .2s ease-in-out;
+        }
+
+        .prev {
+            left: -1.2rem;
+        }
+
+        .next {
+            right: -1.2rem;
+        }
+
+        .btn:hover {
+            background-color: #f2fdff;
+            color: #3e92cc;
+        }
+
+        .svg {
+            height: 1.2rem;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .slide_1 {
+            background-image: url(images/image_0.jpeg);
+        }
+
+        .slide_2 {
+            background-image: url(images/image_1.jpeg);
+        }
+
+        .slide_3 {
+            background-image: url(images/image_2.jpeg);
+        }
+
+        .slide_4 {
+            background-image: url(images/image_3.jpeg);
+        }
+
+        .slide_5 {
+            background-image: url(images/image_4.jpeg);
+        }
+    </style>
+    <title>Background Image Slider</title>
+</head>
+<body class="body">
+    <div class="slider">
+
+        <div class="slide slide_1"></div>
+        <div class="slide slide_2"></div>
+        <div class="slide slide_3"></div>
+        <div class="slide slide_4"></div>
+        <div class="slide slide_5"></div>
+
+        <button type="button" class="btn prev" onclick="previousSlide()">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-left" class="svg svg-inline--fa fa-caret-left fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z"></path></svg>
+        </button>
+        <button type="button" class="btn next" onclick="nextSlide()">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" class="svg svg-inline--fa fa-caret-right fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg>
+        </button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
